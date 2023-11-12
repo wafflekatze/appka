@@ -1,0 +1,65 @@
+<OpenScreen>:
+    MDBoxLayout:
+
+        orientation: "vertical"
+        MDBoxLayout:
+            padding: 5
+            spacing: 150
+            size_hint_y:0.2
+            MDIconButton:
+                icon: "chevron-left"
+                theme_icon_color: "Custom"
+                icon_color: "black"
+
+            Button:
+                background_color: 0, 0, 0, 0
+                Image:
+                    id: keyless
+                    source: 'images/KEYLESS.png'
+                    size: "400dp", "500dp"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+        MDBoxLayout:
+            orientation: "vertical"
+            Image:
+                source: "images/key.png"
+                size: "400dp", "500dp"
+            MDLabel:
+                font_size: 20
+                color: 60/255, 60/255, 60/255, 1
+                halign: "center"
+                text: "вул. Підараса 5, \n ЛНУ, \n ауд. 666"
+            MDLabel:
+                font_size: 14
+                color: 120/255, 120/255, 120/255, 1
+                halign: "center"
+                text: "Адміністратор: Хуй Сунь Вчай \n Контакти адміністратора: \n +380000000000 \n admin@gmail.com"
+            Button:
+                text: "Відкрий шмаровоз"
+                background_color: 0, 0, 0, 0
+                on_press: root.ask_permission()
+                Image:
+                    id: ask_permission
+                    source: 'images/Ask_Button.png'
+                    size: "400dp", "500dp"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+        MDAnchorLayout:
+            anchor_x: "center"
+            md_bg_color: "green"
+            MDIconButton:
+                icon: "exit-to-app"
+                theme_icon_color: "Custom"
+                icon_color: "black"
+                pos_hint: {"center_x": 0.3}
+            MDIconButton:
+                icon: "help-circle-outline"
+                theme_icon_color: "Custom"
+                icon_color: "black"
+                pos_hint: {"center_x": 0.5}
+            MDIconButton:
+                icon: "home-outline"
+                theme_icon_color: "Custom"
+                icon_color: "black"
+                pos_hint: {"center_x": 0.7}
